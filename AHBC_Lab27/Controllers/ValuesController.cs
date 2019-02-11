@@ -12,8 +12,9 @@ namespace AHBC_Lab27.Controllers
         // GET api/values
         public IEnumerable<string> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new string[] { "/points/39.0693,-94.6716" };
         }
+
 
         // GET api/values/5
         public string Get(int id)

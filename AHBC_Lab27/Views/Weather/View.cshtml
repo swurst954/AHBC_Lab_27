@@ -1,5 +1,4 @@
-﻿@model AHBC_Lab27.Models.Weather
-
+﻿
 @{
     ViewBag.Title = "View";
 }
@@ -12,13 +11,14 @@
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 
-
+    
     <script language="javascript">
         $("#getSomeData").click(function () {
             $.ajax({
                 type: "GET",
-                url: 'https://forecast.weather.gov/MapClick.php?lat=38.4247341&lon=-86.9624086&FcstType=json',
-                    alert(data.values);
+                url: 'https://api.weather.gov/',
+                success: function (data) {
+                    alert(data.value);
                 },
                 error: function () {
                     alert("Error while inserting data");
